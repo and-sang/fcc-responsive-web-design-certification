@@ -1,0 +1,135 @@
+:root {
+  /* CSS HEX https://coolors.co/d8d4d8-e9f1f7-3d2b3d-efca08-d36582-253c78 */
+  --light-gray: #d8d4d8ff;
+  --alice-blue: #e9f1f7ff;
+  --dark-purple: #3d2b3dff;
+  --yellow-munsell: #efca08ff;
+  --cinnamon-satin: #d36582ff;
+  --dark-cornflower-blue: #253c78ff;
+
+  /* fonts */
+  font-family: "Titillium Web", sans-serif;
+
+  /* responsive */
+  --max-img-width: 1024px;
+  --max-text-width: calc((var(--max-img-width) - 2%));
+  --max-page-width: calc(var(--max-img-width) + 5%);
+}
+
+/* Global Styles
+--------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-gray);
+  text-align: center;
+  color: var(--dark-purple);
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+
+/* min-width about [5%][100%][5%] of max-img-width */
+@media screen and (min-width: 1126px) {
+  body {
+    max-width: var(--max-page-width);
+    margin: 0 auto;
+    border-left: 2px solid var(--yellow-munsell);
+    border-right: 2px solid var(--yellow-munsell);
+  }
+}
+
+/* Header
+--------------------------------------------------------------*/
+header {
+  background: var(--dark-cornflower-blue);
+  color: var(--alice-blue);
+  padding: 10% 8%;
+}
+
+header h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
+
+header h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+img {
+  margin: 3% auto;
+  margin-top: 50px;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: var(--max-img-width);
+  border: 2px solid var(--yellow-munsell);
+  border-radius: 10px;
+}
+
+header p i {
+  color: var(--yellow-munsell);
+}
+
+header p {
+  margin: 0 auto;
+  margin-top: 10%;
+  font-style: italic;
+  font-size: 1.2em;
+  max-width: var(--max-text-width);
+}
+
+/* Content
+--------------------------------------------------------------*/
+#tribute-info {
+  background: var(--alice-blue);
+}
+
+#tribute-info h3 {
+  background: var(--yellow-munsell);
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding: 3% 8%;
+}
+
+#tribute-info ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 2% 8%;
+  padding-bottom: 8%;
+  max-width: var(--max-text-width);
+}
+
+#tribute-info li {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+#tribute-info li a {
+  font-weight: bold;
+  color: var(--dark-cornflower-blue);
+  cursor: context-menu;
+}
+
+/* Footer
+--------------------------------------------------------------*/
+footer {
+  background: var(--dark-cornflower-blue);
+  color: var(--alice-blue);
+  padding: 3% 8%;
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+footer a:link {
+  color: var(--yellow-munsell);
+}
+
+footer a:visited {
+  color: var(--cinnamon-satin);
+}
