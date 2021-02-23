@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Stick&display=swap"
+      rel="stylesheet"
+    />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">back to the woods</h1>
+      <p id="description">
+        we'll build a campfire by the lake, and spend the night together
+      </p>
+    </header>
+    <form id="survey-form">
+      <div id="contact-wrap" class="content-wrap">
+        <div>
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div>
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="someone@example.com"
+            required
+          />
+        </div>
+      </div>
+      <div id="attendance-wrap" class="content-wrap">
+        <div class="participants">
+          <label id="number-label" for="additional-friends"
+            >You can also bring friends along
+            <span class="clue">(Max 3)</span></label
+          >
+          <input
+            type="number"
+            name="number"
+            id="number"
+            min="0"
+            max="3"
+            placeholder="0"
+          />
+        </div>
+        <div class="transportation">
+          <label>
+            <input
+              name="ride"
+              value="have"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            I have a ride</label
+          >
+          <label>
+            <input name="ride" value="need" type="radio" class="input-radio" />
+            I need a ride</label
+          >
+          <label>
+            <input name="ride" value="offer" type="radio" class="input-radio" />
+            I can offer a ride</label
+          >
+        </div>
+      </div>
+      <div id="organisation-wrap" class="content-wrap">
+        <div>
+          <label id="dropdown-label" for="dropdown"
+            >Where do you think we should make the fire?</label
+          >
+          <select id="dropdown" name="location" class="form-control" required>
+            <option disabled selected value>Pick a place</option>
+            <option value="lake">By the lake</option>
+            <option value="hill">On top of the hill</option>
+            <option value="forest">Deep in the forest</option>
+            <option value="preferNo">It's alright, I don't mind</option>
+          </select>
+        </div>
+        <div>
+          <label id="checkbox-label">
+            What would you be able to provide? <br />
+            <span class="clue">(Check all that apply)</span>
+            <label
+              ><input
+                name="food"
+                value="food"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Food</label
+            >
+            <label
+              ><input
+                name="food"
+                value="vegetarian"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Food (vegetarian)</label
+            >
+            <label>
+              <input
+                name="beverages"
+                value="alcoholic"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Beer, wine, etc</label
+            >
+            <label>
+              <input
+                name="beverages"
+                value="soft-drinks"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Water and soda</label
+            >
+            <label
+              ><input
+                name="entertainment"
+                value="music"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Music</label
+            >
+            <label
+              ><input
+                name="entertainment"
+                value="horror-stories"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              The best horror stories</label
+            >
+            <label
+              ><input
+                name="fire"
+                value="firewood"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Wood for the fire</label
+            >
+            <label
+              ><input
+                name="fire"
+                value="technique"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Excellent camp fire technique</label
+            >
+          </label>
+        </div>
+      </div>
+      <div id="comments-wrap" class="content-wrap">
+        <label id="comment-label" for="comment">Additional comments</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="5"
+          cols="30"
+          placeholder="Will there be bears and wolves?"
+        ></textarea>
+      </div>
+      <div id="submit-wrap" class="content-wrap">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+
+    <!-- test environment -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+:root {
+  /* CSS HEX https://coolors.co/3e5641-a24936-d36135-f4f7f5-282b28-83bca9 */
+  --hunter-green: rgb(62, 86, 65);
+  --chestnut: rgb(161, 73, 54);
+  --flame: rgb(211, 99, 54);
+  --cultured: rgb(243, 246, 244);
+  --charleston-green: rgb(39, 42, 39);
+  --green-sheen: rgb(131, 188, 169);
+
+  /* fonts */
+  --body-font-family: "Raleway", sans-serif;
+  --heading-font-family: "Stick", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+  width: 100vw;
+  max-width: calc(667px - 10%);
+  background: var(--cultured);
+  color: var(--charleston-green);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #d36135ff;
+}
+
+/************** header **************/
+
+header {
+  border: 3px solid rgba(161, 73, 54, 1);
+  border-radius: 25px;
+  background: rgba(161, 73, 54, 0.4);
+  margin: 10px auto;
+  padding: 2% 4%;
+  align-self: center;
+}
+
+header #title {
+  font-family: var(--heading-font-family);
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+header #description {
+  font-family: var(--heading-font-family);
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+/************** form **************/
+form {
+  border: 3px solid rgba(62, 86, 65, 1);
+  border-radius: 25px;
+  background: rgba(62, 86, 65, 0.4);
+  margin: 0.4em auto;
+  padding: 2% 4%;
+  font-family: var(--body-font-family);
+  font-size: 1.2em;
+}
+
+form .content-wrap {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkbox-label,
+#number-label,
+#dropdown-label,
+#comment-label,
+#submit {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/************** form - contact **************/
+#contact-wrap {
+  width: 280px;
+  height: 3em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+#contact-wrap div {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact-wrap div input {
+  width: 200px;
+}
+
+/************** form - attendance **************/
+#attendance-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+#attendance-wrap .participants {
+  margin: 0 auto;
+  width: 80%;
+  min-width: 336px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#attendance-wrap #number-label .clue {
+  font-weight: normal;
+}
+
+#attendance-wrap #number {
+  width: 40px;
+  font-size: 0.9em;
+  max-height: 1.3em;
+  text-align: center;
+}
+
+#attendance-wrap .transportation {
+  margin: 0 auto;
+  margin-top: 0.4em;
+  margin-left: 25%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+#attendance-wrap .transportation .label {
+  width: auto;
+}
+
+/************** form - organisation **************/
+#organisation-wrap div {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#organisation-wrap div #dropdown {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 0.4em;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#organisation-wrap div #checkbox-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.2em;
+}
+
+#organisation-wrap div #checkbox-label .clue {
+  font-weight: normal;
+}
+
+#organisation-wrap div #checkbox-label label {
+  font-weight: normal;
+  margin: 0 auto;
+  margin-top: 0.2em;
+  margin-left: 25%;
+}
+
+/************** form - comments **************/
+#comments-wrap {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#comments-wrap textarea {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0.6em;
+  font-size: 0.9em;
+}
+
+/************** form - submit **************/
+#submit-wrap {
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+#submit-wrap button {
+  padding: 4px 16px;
+  border-radius: 6px;
+  border: 2px solid rgba(211, 99, 54, 1);
+  background: rgba(211, 99, 54, 0.4);
+  font-weight: bold;
+}
